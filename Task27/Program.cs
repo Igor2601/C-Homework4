@@ -8,12 +8,17 @@ int n = int.Parse(Console.ReadLine());
 int result = 0;
 int Summa(int n)
 {
-if (n<100)
-result = n/10 + n%10;   
-if (n>=100 && n<1000)
-result = (n/100) + (n%100/10) + (n%10);
-if (n>=1000 && n<10000)
-result = (n/1000) + (n%1000/100) + (n%100/10) + (n%10);
+// if (n<100)
+// result = n/10 + n%10;   
+// if (n>=100 && n<1000)
+// result = (n/100) + (n%100/10) + (n%10);
+// if (n>=1000 && n<10000)
+// result = (n/1000) + (n%1000/100) + (n%100/10) + (n%10);
+while (n > 0)
+{
+    result += n % 10;
+    n = n / 10;
+}
 return result;
 }
 Console.WriteLine($"Сумма цифр в числе -> {Summa(n)}");

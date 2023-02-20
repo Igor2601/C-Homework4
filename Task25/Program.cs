@@ -9,7 +9,7 @@ int b = int.Parse(Console.ReadLine());
 int Power(int a, int b)
 {
     int result = a;
-    for(int i =1; i<b;i++)
+    for(int i = 1; i<b;i++)
    result = result*a;
    return result;
 }
